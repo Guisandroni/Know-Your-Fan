@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Know Your Fan
 
-Currently, two official plugins are available:
+![GitHub](https://img.shields.io/github/license/Guisandroni/Know-Your-Fan) ![GitHub issues](https://img.shields.io/github/issues/Guisandroni/Know-Your-Fan)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Know Your Fan** é uma aplicação desenvolvida para ajudar criadores de conteúdo, marcas e influenciadores a entenderem melhor seus fãs e seguidores. Com essa ferramenta, você pode analisar métricas sociais, comportamentos e preferências dos seus seguidores, permitindo que você crie estratégias mais eficazes para engajamento e crescimento.
 
-## Expanding the ESLint configuration
+## Funcionalidades Principais
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Análise de Engajamento**: Obtenha insights sobre o nível de engajamento dos seus fãs em diferentes plataformas.
+- **Demografia do Público**: Descubra informações detalhadas sobre a faixa etária, localização geográfica e interesses do seu público.
+- **Relatórios Personalizados**: Gere relatórios personalizados com gráficos e dados visuais para facilitar a interpretação.
+- **Integrações**: Suporte a integrações com plataformas populares como Instagram, Twitter (X), YouTube e TikTok.
+- **Ferramentas de Crescimento**: Sugestões práticas para aumentar o alcance e melhorar o relacionamento com os seguidores.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Requisitos
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Node.js (v16 ou superior)
+- npm ou yarn
+- Conta nas plataformas que deseja integrar (Instagram, Twitter, etc.)
+- Chaves de API válidas para as integrações necessárias
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Instalação
+
+Siga os passos abaixo para configurar o projeto localmente:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Guisandroni/Know-Your-Fan.git
+   cd Know-Your-Fan
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+3. Configure as variáveis de ambiente:
+   Crie um arquivo `.env` na raiz do projeto e adicione suas chaves de API e outras configurações necessárias. Exemplo:
+   ```env
+   INSTAGRAM_API_KEY=your-instagram-api-key
+   TWITTER_API_KEY=your-twitter-api-key
+   PORT=3000
+   ```
+
+4. Inicie a aplicação:
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
+
+5. Acesse a aplicação no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE). Isso significa que você pode usá-lo, modificá-lo e distribuí-lo livremente, desde que inclua a licença original.
+
+## Problemas Conhecidos
+
+- Algumas integrações podem não funcionar corretamente se as APIs das plataformas forem alteradas.
+- O tempo de resposta pode variar dependendo da quantidade de dados processados.
+
+Se você encontrar algum problema, por favor, abra uma issue no repositório.
+
+
+Esperamos que o **Know Your Fan** seja útil para você! 😊
+
+---
